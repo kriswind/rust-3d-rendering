@@ -7,7 +7,7 @@ use winit::{
 pub async fn run(event_loop: EventLoop<()>, window: &Window) {      
     let size = window.inner_size();
     let instance = wgpu::Instance::new(wgpu::InstanceDescriptor {
-        backends: wgpu::Backends::VULKAN,
+        backends: wgpu::Backends::all(),
         dx12_shader_compiler: Default::default(),
     });
     let surface = unsafe { instance.create_surface(&window) }.unwrap();
