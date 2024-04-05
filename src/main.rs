@@ -135,7 +135,7 @@ pub async fn run(event_loop: EventLoop<()>, window: &Window) {
 fn main() {
     let event_loop = EventLoop::new();
     let window = winit::window::Window::new(&event_loop).unwrap(); 
-    window.set_title("wgpu03: triangle");
+    window.set_title("silly little triangle");
     env_logger::init();
     pollster::block_on( run(event_loop, &window));    
 }
